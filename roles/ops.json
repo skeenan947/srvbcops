@@ -1,0 +1,40 @@
+{
+  "name": "ops",
+  "description": "",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "dnsmasq": {
+      "enable_dns": false,
+      "enable_dhcp": true,
+      "dns": {
+        "server": "8.8.8.8",
+        "server": "8.8.4.4",
+        "expand-hosts": null,
+        "no-resolv": null,
+        "no-poll": null
+      },
+      "dhcp": {
+        "dhcp-authoritative": null,
+        "dhcp-range": "eth0,10.1.0.150,10.0.0.200,72h",
+        "dhcp-range": "eth0,10.2.0.100,10.2.0.200,72h",
+        "dhcp-range": "eth0,10.100.200.10,10.2.0.220,72h",
+        "domain": "ops.srvbc.net",
+        "interface": "eth0",
+        "dhcp-boot": "pxelinux.0",
+        "enable-tftp": null,
+        "tftp-root": "/var/lib/tftpboot",
+        "tftp-secure": null
+      }
+    }
+  },
+  "override_attributes": {
+
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[dnsmasq]"
+  ],
+  "env_run_lists": {
+
+  }
+}

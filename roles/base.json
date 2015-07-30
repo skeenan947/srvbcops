@@ -1,0 +1,33 @@
+{
+  "name": "base",
+  "description": "",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "cloud": {
+      "provider": "zerigo"
+    },
+    "hosts_file": {
+      "custom_entries": {
+        "10.1.0.110": ["mgmt01", "mgmt01.srv.srvbc.net", "mgmt01.ops.srvbc.net"]
+      }
+    },
+    "dns": {
+      "disable": false,
+      "domain": "ops.srvbc.net",
+      "provider": "zerigo",
+      "credentials": {
+        "zerigo_email": "skeenan@gmail.com",
+        "zerigo_token": "f2bdbaba430100199ac0e4fec8e71e33"
+      }
+    }
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[dns::fqdn]",
+    "recipe[hosts_file::custom_entries]",
+    "recipe[dns]"
+  ],
+  "env_run_lists": {
+
+  }
+}
