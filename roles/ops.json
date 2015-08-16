@@ -4,20 +4,33 @@
   "json_class": "Chef::Role",
   "default_attributes": {
     "dnsmasq": {
-      "enable_dns": false,
+      "enable_dns": true,
       "enable_dhcp": true,
       "dns": {
-        "server": "8.8.8.8",
-        "server": "8.8.4.4",
+        "server": [
+          "/ops.srvbc.net/162.159.24.6",
+          "8.8.8.8",
+          "8.8.4.4"
+        ],
+        "host-record": [
+          "mgmt01,mgmt01.srv.srvbc.net,10.1.0.110",
+          "ops01.srv.srvbc.net,10.1.0.100"
+        ],
         "expand-hosts": null,
         "no-resolv": null,
         "no-poll": null
       },
       "dhcp": {
         "dhcp-authoritative": null,
-        "dhcp-range": "eth0,10.1.0.150,10.0.0.200,72h",
-        "dhcp-range": "eth0,10.2.0.100,10.2.0.200,72h",
-        "dhcp-range": "eth0,10.100.200.10,10.2.0.220,72h",
+        "dhcp-range": [
+          "eth0,10.0.0.100,10.0.0.200,255.255.255.0,72h",
+          "eth0,10.1.0.150,10.1.0.200,255.255.255.0,72h",
+          "eth0,10.2.0.100,10.2.0.200,255.255.255.0,72h",
+          "eth0,10.100.1.100,10.100.1.220,255.255.255.0,72h",
+          "eth0,10.100.2.100,10.100.2.220,255.255.255.0,72h",
+          "eth0,10.100.200.100,10.100.200.220,72h",
+          "eth0,192.168.1.100,192.168.1.200,72h"
+        ],
         "domain": "ops.srvbc.net",
         "interface": "eth0",
         "dhcp-boot": "pxelinux.0",
