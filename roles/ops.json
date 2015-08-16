@@ -14,6 +14,7 @@
         ],
         "host-record": [
           "mgmt01,mgmt01.srv.srvbc.net,10.1.0.110",
+          "dsm,dsm.srv.srvbc.net,rackstation,rackstation.srv.srvbc.net,10.1.0.50",
           "ops01.srv.srvbc.net,10.1.0.100"
         ],
         "expand-hosts": null,
