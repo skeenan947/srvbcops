@@ -25,7 +25,8 @@
   "run_list": [
     "recipe[dns::fqdn]",
     "recipe[hosts_file::custom_entries]",
-    "recipe[dns]"
+    "recipe[dns]",
+    "role[newrelic]"
   ],
   "env_run_lists": {
 

@@ -1,0 +1,19 @@
+{
+  "name": "newrelic",
+  "description": "",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "newrelic": {
+      "license": "451b253447fd660b182b6c0cbbb522011ac5029b"
+    }
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[newrelic::repository]",
+    "recipe[newrelic]",
+    "recipe[newrelic::ruby_agent]"
+  ],
+  "env_run_lists": {
+
+  }
+}

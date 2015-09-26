@@ -2,6 +2,7 @@ DEPENDENCIES
   dns
   dnsmasq
   docker
+  newrelic
 
 GRAPH
   apt (2.7.0)
@@ -10,6 +11,7 @@ GRAPH
     modules (>= 0.0.0)
   build-essential (2.2.3)
   chef_handler (1.1.8)
+  curl (2.0.1)
   device-mapper (0.1.0)
     apt (>= 0.0.0)
     modules (>= 0.0.0)
@@ -48,9 +50,17 @@ GRAPH
     iptables-ng (>= 0.0.0)
     polipo (>= 0.0.0)
   modules (0.2.0)
+  newrelic (2.15.1)
+    apt (~> 2.0)
+    curl (>= 0.0.0)
+    python (>= 0.0.0)
+    yum (~> 3.0)
   ohai (2.0.1)
   packagecloud (0.0.17)
   polipo (0.1.0)
+  python (1.4.6)
+    build-essential (>= 0.0.0)
+    yum-epel (>= 0.0.0)
   runit (1.6.0)
     packagecloud (>= 0.0.0)
   sysctl (0.6.2)

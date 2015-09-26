@@ -11,6 +11,6 @@ RUN \
   apt-get -q -y install libav-tools s3cmd python-pip python-boto && \
   pip install qtfaststart
 
-VOLUME /vagrant
+VOLUME /root/video
 
 CMD /root/scripts/enc.sh
