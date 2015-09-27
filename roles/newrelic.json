@@ -3,15 +3,20 @@
   "description": "",
   "json_class": "Chef::Role",
   "default_attributes": {
-    "newrelic": {
-      "license": "451b253447fd660b182b6c0cbbb522011ac5029b"
+    "newrelic-ng": {
+      "license_key": "451b253447fd660b182b6c0cbbb522011ac5029b"
+    },
+    "nginx": {
+      "authorized_ips": [
+        "162.247.240.0/22",
+        "50.31.164.0/24"
+      ]
     }
   },
   "chef_type": "role",
   "run_list": [
-    "recipe[newrelic::repository]",
-    "recipe[newrelic]",
-    "recipe[newrelic::ruby_agent]"
+    "recipe[newrelic-ng::newrelic-repository]",
+    "recipe[newrelic-ng]"
   ],
   "env_run_lists": {
 
