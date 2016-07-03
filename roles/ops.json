@@ -12,9 +12,7 @@
           "srv.srvbc.net"
         ],
         "server": [
-          "/ops.srvbc.net/162.159.24.6",
-          "8.8.8.8",
-          "8.8.4.4"
+          "10.0.0.1"
         ],
         "host-record": [
           "mgmt01,mgmt01.srv.srvbc.net,10.1.0.110",
@@ -55,6 +53,7 @@
   "chef_type": "role",
   "run_list": [
     "recipe[dnsmasq]",
+    "recipe[postfix]",
     "role[newrelic]"
   ],
   "env_run_lists": {
