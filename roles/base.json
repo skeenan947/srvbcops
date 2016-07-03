@@ -24,6 +24,7 @@
   "chef_type": "role",
   "run_list": [
     "recipe[dns::fqdn]",
+    "recipe[postfix]",
     "recipe[hosts_file::custom_entries]",
     "recipe[dns]",
     "role[newrelic]"
