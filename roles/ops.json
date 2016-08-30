@@ -40,10 +40,7 @@
           "74:d4:35:5b:7e:bc,10.1.0.20,mgmt02,infinite"
         ],
         "domain": "ops.srvbc.net",
-        "dhcp-boot": "pxelinux.0",
-        "enable-tftp": null,
-        "tftp-root": "/var/lib/tftpboot",
-        "tftp-secure": null
+        "dhcp-boot": "pxelinux.0"
       }
     }
   },
