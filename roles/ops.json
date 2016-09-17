@@ -37,7 +37,8 @@
           "eth0,192.168.1.100,192.168.1.200,72h"
         ],
         "dhcp-host": [
-          "74:d4:35:5b:7e:bc,10.1.0.20,mgmt02,infinite"
+          "74:d4:35:5b:7e:bc,10.1.0.20,mgmt02,infinite",
+          "00:05:a6:01:5a:a5,10.2.0.31,extron02,infinite"
         ],
         "domain": "ops.srvbc.net",
         "dhcp-boot": "pxelinux.0"
