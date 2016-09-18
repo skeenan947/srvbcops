@@ -39,7 +39,8 @@
         "dhcp-host": [
           "74:d4:35:5b:7e:bc,10.1.0.20,mgmt02,infinite",
           "3c:07:54:3a:91:38,10.2.0.21,videoroom02,infinite",
-          "00:05:a6:01:5a:a5,10.2.0.31,extron02,infinite"
+          "00:05:a6:01:5a:a5,10.2.0.31,extron02,infinite",
+          "f8:b1:56:c6:4b:9c,10.2.0.150,projector-pc,infinite"
         ],
         "domain": "ops.srvbc.net",
         "dhcp-boot": "pxelinux.0"
