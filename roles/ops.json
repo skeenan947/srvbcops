@@ -3,6 +3,11 @@
   "description": "",
   "json_class": "Chef::Role",
   "default_attributes": {
+    "postfix": {
+      "main": {
+        "inet_interfaces": "all"
+      }
+    },
     "dnsmasq": {
       "enable_dns": true,
       "enable_dhcp": true,
